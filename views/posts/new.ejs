@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<form action="/posts" method="POST">
+    <label>Title: </label>
+    <input type="text" name="title">
+    <textarea name="content" cols="30" rows="10" placeholder="Spread the word..."></textarea>
+    <label>Location: </label>
+    <input type="text" name="venue">
+    <input type="text" name="city">
+</form>
+
+<%- include('../partials/footer') %> 

@@ -5,7 +5,8 @@ const postSchema = new Schema({
     title: String,
     content: String,
     Venue: [{
-        type: Schema.Types.ObjectId
+        type: Schema.Types.ObjectId,
+        ref: "Venue"
     }],
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,
