@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const postSchema = new Schema({
     title: String,
     content: String,
-    Venue: [{
+    venue: [{
         type: Schema.Types.ObjectId,
         ref: "Venue"
     }],

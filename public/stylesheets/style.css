@@ -1,12 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  width: 100vw;
+  margin: 0 auto;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   color: #00B7FF;
 }
 
+nav {
+  margin: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 2.5%;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
 
 .login {
   display: flex;

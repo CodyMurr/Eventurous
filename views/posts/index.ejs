@@ -1,5 +1,11 @@
 <%- include('../partials/header') %>
 
-
+<% posts.forEach(function(p) { %>
+    <section id="post">
+        <h2 id="post-title"><%= p.title %></h2>
+        <p id="post-content"><%= p.content %></p>
+        <h3 id="venue"><%= p.venue %></h3>
+    </section>
+<% }); %>
 
 <%- include('../partials/footer') %>

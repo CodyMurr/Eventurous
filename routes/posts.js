@@ -11,8 +11,8 @@ router.get('/', postsCtrl.index);
 router.get('/new', isLoggedIn, postsCtrl.new);
 // GET /movies/:id (display a "detail/show" page for a single movie)
 router.get('/:id', postsCtrl.show);
-// // POST /movies (handle the new form being submitted)
-// router.post('/', isLoggedIn, postsCtrl.create);
+// POST /movies (handle the new form being submitted)
+router.post('/', isLoggedIn, postsCtrl.create);
 
 module.exports = router;
 
