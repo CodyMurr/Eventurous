@@ -3,8 +3,9 @@
 <% posts.forEach(function(p) { %>
     <section id="post">
         <h2 id="post-title"><%= p.title %></h2>
-        <p id="post-content"><%= p.content %></p>
+        <p id="post-event"><%= p.event %></p>
         <h3 id="venue"><%= p.venue %></h3>
+        <h3 id="location"><%= p.location %></h3>
     </section>
 <% }); %>
 

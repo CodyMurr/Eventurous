@@ -3,10 +3,11 @@
 <form action="/posts" method="POST">
     <label>Title: </label>
     <input type="text" name="title">
-    <textarea name="content" cols="30" rows="10" placeholder="Spread the word..."></textarea>
+    <textarea name="event" cols="30" rows="10" placeholder="Spread the word..."></textarea>
+    <label>Venue: </label>
+    <input type="text" name="venue" required>
     <label>Location: </label>
-    <input type="text" name="venue">
-    <input type="text" name="city">
+    <input type="text" name="location" required>
     <button type="submit">Post</button>
 </form>
 
