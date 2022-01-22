@@ -1,22 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
-const eventSchema = new Schema({
-    category: [categorySchema],
-    familyFriendly: Boolean,
-    scheduled: {
-        type: Date,
-        required: true
-    }
-});
-
-
 const postSchema = new Schema({
     title: String,
     venue: {
-        type: Schema.Types.ObjectId,
-        ref: "Venue"
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
     },
     event: {
         type: String,
