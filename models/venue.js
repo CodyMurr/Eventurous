@@ -1,19 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const categorySchema = new Schema({
-    categoryName: String
-})
-
-const eventSchema = new Schema({
-    category: [categorySchema],
-    familyFriendly: Boolean,
-    scheduled: {
-        type: Date,
-        required: true
-    }
-});
-
 const reviewSchema = newSchema({
     content: String,
     rating: {
@@ -33,7 +20,6 @@ const venueSchema = new Schema({
         required: true
     },
     reviews: [reviewSchema],
-    events: [eventSchema]
 });
 
 module.exports = mongoose.model('Venue', venueSchema);
