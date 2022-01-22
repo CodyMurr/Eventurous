@@ -10,6 +10,11 @@
     <nav>
         <a href="/">Home</a>
         <% if (user) { %>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="/">All Posts</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="/posts/new">New Post</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="/logout">Log Out</a>
         <% } else { %>
             <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
