@@ -1,11 +1,13 @@
 <%- include('../partials/header') %>
 
 <% posts.forEach(function(p) { %>
-    <section id="post">
-        <h2 id="post-title"><%= p.title %></h2>
-        <p id="post-event"><%= p.event %></p>
-        <h3 id="venue"><%= p.venue %></h3>
-        <h3 id="location"><%= p.location %></h3>
+    <section id="post" class="flex col">
+        <a href="/posts/<%= p._id %>"><h2 class="flex"><%= p.title %></h2></a>
+        <p><%= p.event %></p>
+        <aside class="flex row">
+            <h3 id="venue"><%= p.venue %>&nbsp;|&nbsp;</h3>
+            <h3 id="location"><%= p.location %></h3>
+        </aside>
     </section>
 <% }); %>
 

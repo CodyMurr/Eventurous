@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body class="flex col">
@@ -9,13 +10,17 @@
       <a href="/">Home</a>
       <% if (user) { %>
           &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="/">All Posts</a>
+          <a href="/">All Events</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="/posts/new">New Post</a>
+          <a href="/posts/new">Post an Event</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="#">Popular Places</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="#">Categories</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <a href="/logout">Log Out</a>
       <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+          <a href="/auth/google" class="login flex">Login&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
       <% } %>
     </nav>
     <h1>Night Out</h1>

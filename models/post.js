@@ -1,6 +1,25 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const replySchema = new Schema({
+    content: String,
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    userName: String,
+    userAvatar: String
+}, {
+    timestamps: true
+});
+
+const commentSchema = new Schema({
+    content: String,
+    replies: [replySchema],
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    userName: String,
+    userAvatar: String
+}, {
+    timestamps: true
+});
+
 const postSchema = new Schema({
     title: String,
     venue: {
@@ -15,9 +34,9 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
-    userName: String,
-    userAvatar: String
+    comments: [commentSchema]
+}, {
+    timestamps: true
 });
 
 module.exports = mongoose.model('Post', postSchema);

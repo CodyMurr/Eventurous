@@ -13,6 +13,7 @@ body {
 
 a {
   color: #00B7FF;
+  text-decoration: none;
 }
 
 nav {
@@ -33,15 +34,47 @@ nav {
 
 .row {
   flex-direction: row;
+  align-items: center;
 }
 
 .login {
-  display: flex;
-  justify-content: center;
+  position: absolute;
   align-items: center;
   height: 34px;
+  right: 5%;
 }
 
 .login img {
   height: 30px;
+}
+
+.fa-trash-alt {
+  color: red;
+}
+
+#post {
+  width: 50%;
+  border: 2px solid;
+  margin: 2%;
+}
+
+#post a {
+  color:#ffa600
+}
+
+#post h2 {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 0;
+  background-color: rgba(76, 139, 182, 0.699);
+}
+
+#comment {
+  border: 1px solid;
+  width: 50%;
+  justify-content: space-evenly;
+  
+  margin: 5%;
 }
