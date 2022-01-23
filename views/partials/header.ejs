@@ -9,19 +9,21 @@
     <nav class="flex row">
       <a href="/">Home</a>
       <% if (user) { %>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="/">All Events</a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="/posts/new">Post an Event</a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="#">Popular Places</a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="#">Categories</a>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href="/logout">Log Out</a>
-      <% } else { %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/">All Events</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/posts/new">Post an Event</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#">Popular Places</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/categories/index">Categories</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/logout">Log Out</a>
+        <% } else { %>
           <a href="/auth/google" class="login flex">Login&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-      <% } %>
-    </nav>
-    <h1>Night Out</h1>
-    <p>Plan Your Next Outting</p>
+          <% } %>
+        </nav>
+        <header>
+          <h1>Night Out</h1>
+          <p>Plan Your Next Outting</p>
+        </header>

@@ -1,0 +1,16 @@
+<%- include('../partials/header') %> 
+
+<div id="categ-page" class="flex
+col">
+    <% if (categories.length) { %> 
+        <% categories.forEach(function(cat) { %>
+
+            <input type="checkbox" name="category" value="<%= cat.name %>" checked>
+
+        <% }); %> 
+    <% } else { %>
+        <h3>No Categories To Display</h3>
+    <% } %>
+    </div>
+
+<%- include('../partials/footer') %> 

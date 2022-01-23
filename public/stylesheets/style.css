@@ -28,7 +28,12 @@ nav {
   top: 2.5%;
 }
 
-section {
+header {
+  width: 100%;
+  text-align: center;
+}
+
+section, header {
   background-color: #0C2427;
 }
 
