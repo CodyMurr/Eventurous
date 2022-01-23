@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  color: #B0DDC2;
 }
 
 body {
@@ -7,25 +8,44 @@ body {
   margin: 0 auto;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  justify-content: center;
-  align-items: center;
+  background-color: #62676A;
 }
 
 a {
-  color: #00B7FF;
   text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: rgb(189, 188, 188);
 }
 
 nav {
   margin: 0;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-evenly !important;
   position: fixed;
   top: 2.5%;
 }
 
+section {
+  background-color: #0C2427;
+}
+
+textarea {
+  color: #000;
+  font-size: 1.25em;
+  height: 55px;
+}
+
+button {
+  color: #0C2427;
+}
+
 .flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .col {
@@ -34,12 +54,10 @@ nav {
 
 .row {
   flex-direction: row;
-  align-items: center;
 }
 
 .login {
   position: absolute;
-  align-items: center;
   height: 34px;
   right: 5%;
 }
@@ -49,32 +67,27 @@ nav {
 }
 
 .fa-trash-alt {
-  color: red;
+  color: red !important;
 }
 
-#post {
+#post, #show-post {
   width: 50%;
-  border: 2px solid;
   margin: 2%;
-}
-
-#post a {
-  color:#ffa600
+  border-radius: 25px;
 }
 
 #post h2 {
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 50px;
   margin-top: 0;
-  background-color: rgba(76, 139, 182, 0.699);
 }
 
 #comment {
   border: 1px solid;
+  border-radius: 25px;
   width: 50%;
-  justify-content: space-evenly;
+  height: 75px;
+  justify-content: space-evenly !important;
   
   margin: 5%;
 }

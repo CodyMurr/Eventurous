@@ -34,6 +34,10 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
+    },
     comments: [commentSchema]
 }, {
     timestamps: true

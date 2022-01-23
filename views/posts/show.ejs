@@ -1,19 +1,20 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
+<section id="show-post" class="flex col">
     <h2><%= post.title %></h2>
     <p><%= post.event %> </p>
-    <h3><%= post.venue %> </h3>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <h3><%= post.location %></h3>
+    <div class="flex row">
+        <h3><%= post.venue %>&nbsp;|&nbsp;</h3>
+        <h3><%= post.location %></h3>
+    </div>
 </section>
 
 <h2>Comments</h2>
 <% if (user) { %>
-<form id="add-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
+<form id="add-comment-form" class="flex col" method="POST" action="/posts/<%= post._id %>/comments">
     <label>Comment: </label>
-    <textarea name="content"></textarea>
-    <input type="submit" value="Post">
+    <textarea name="content" cols="60" rows="5" required></textarea>
+    <button type="submit">Post</button>
 </form>
 <% } %>
 
@@ -28,7 +29,7 @@
                 <p><%= c.content %></p>    
             <% if (user && user._id.equals(c.user)) { %>
                 <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                    <button type="submit"><i class="far fa-trash-alt"></i></button>
+                    &nbsp;&nbsp;<button type="submit"><i class="far fa-trash-alt"></i></button>
                 </form>
             <% } %>
             </div>
