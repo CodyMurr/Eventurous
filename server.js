@@ -14,8 +14,10 @@ require('./config/database');
 // Configure passport
 require('./config/passport');
 
+
 var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/posts');
+var venuesRouter = require('./routes/venues');
 var commentsRouter = require('./routes/comments');
 var categoriesRouter = require('./routes/categories');
 
@@ -50,6 +52,7 @@ const isLoggedIn = require('./config/auth');
 
 app.use('/', indexRouter);
 app.use('/posts', postsRouter);
+app.use('/', venuesRouter);
 app.use('/', isLoggedIn, commentsRouter);
 app.use('/', categoriesRouter);
 
