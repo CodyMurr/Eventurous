@@ -1,0 +1,18 @@
+<%- include('../partials/header') %> 
+
+<% if (venues.length) { %> 
+    <% venues.forEach(function(v) { %>
+
+        <section id="venue">
+            <h3><%= v.name %></h3>
+            <h3><%= v.address %></h3>
+            <h3><%= v.locality %></h3>
+        </section>
+
+    <% }); %> 
+<% } else { %>
+    <h2>No venues to display</h2>
+<% } %> 
+<a href="/venues/new"><h3>Add Venue</h3></a>
+
+<%- include('../partials/footer') %> 
