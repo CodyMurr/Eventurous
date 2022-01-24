@@ -1,24 +1,18 @@
 <%- include('../partials/header') %> 
 
-<% if (venues.length) { %> 
-    <% venues.forEach(function(v) { %>
-
-        <section id="venue">
-            <h3><%= v.name %></h3>
-            <h3><%= v.address %></h3>
-            <h3><%= v.locality %></h3>
-        </section>
-
-    <% }); %> 
-<% } else { %>
-    <h2>No venues to display</h2>
-<% } %> 
-<a href="/venues/new"><h3>Add Venue</h3></a>
 <form action="/venues/index" method="GET">
     <input type="hidden" name="lat">
     <input type="hidden" name="lng">
-    <button type="submit" disabled>Find Venues Near Me</button>
+    <button id="near-me" type="submit" disabled>Find Venues Near Me</button>
 </form>
+<div id="venue-list" class="flex row">
+<% places.forEach(function(p) { %>
+    <section id="venue" class="flex col">
+        <h2><%= p.name %></h2>
+        <h2><%= p.location.locality%>, <%= p.location.region %></h2>
+    </section>
+<% }); %> 
+</div>
 <script>
     const latInp = document.querySelector('[name="lat"]');
     const lngInp = document.querySelector('[name="lng"]');

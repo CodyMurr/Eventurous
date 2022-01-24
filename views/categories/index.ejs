@@ -3,7 +3,6 @@
 <div id="categ-page" class="flex col">
     <div class="flex row">
     <% if (categories.length) { %> 
-        <% let clicked = false; %> 
         <% categories.forEach(function(cat) { %>
             <section id="categ-name" class="flex">
                 <h3><%= cat.name %></h3>

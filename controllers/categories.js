@@ -26,6 +26,6 @@ function index(req, res) {
         res.render('categories/index', { title: 'All Categories', categories });
     })
     .catch(function(err) {
-        res.redirect('/categories');
+        res.redirect('/');
     });
 }

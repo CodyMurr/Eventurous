@@ -4,22 +4,7 @@ const FSQ_BASE_URL = "https://api.foursquare.com/v3/places/nearby?";
 
 module.exports = {
     index,
-    new: newVenue,
-    create
 };
-
-function create(req, res) {
-    const venue = new Venue(req.body);
-    venue.save(function(err) {
-        if (err) console.log(err);
-        console.log(venue);
-        res.redirect('/venues/index');
-    });
-}
-
-function newVenue(req, res) {
-    res.render('venues/new', { title: 'Add Venue' });   
-}
 
 async function index(req, res) {
     const {lat, lng} = req.query;
@@ -30,7 +15,7 @@ async function index(req, res) {
             `${FSQ_BASE_URL}ll=${lat},${lng}`,
            { headers: {Authorization: process.env.FSQ_TOKEN}}
         );
-        console.log(response.data.results[0]);
+        console.log(response.data.results);
         places = response.data.results;
     }
     Venue.find({})

@@ -156,7 +156,18 @@ button {
 }
 
 #venue {
-  height: 100px;
-  width: 300px;
+  height: 150px;
+  width: 350px;
   text-align: center;
+}
+
+#near-me {
+  width: 175px;
+  font-size: 1em;
+  margin: 10%;
+}
+
+#venue-list {
+  width: 100%;
+  flex-flow: row wrap;
 }
