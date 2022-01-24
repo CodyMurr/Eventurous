@@ -68,21 +68,29 @@ button {
   flex-direction: row;
 }
 
-.login {
-  position: absolute;
-  height: 34px;
-  right: 5%;
-}
-
-.login img {
-  height: 30px;
-}
-
 .fa-trash-alt {
   color: #ff0000 !important;
 }
 .fa-trash-alt:hover {
   color: #fff !important;
+}
+
+#sign-up {
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 50px;
+  height: 300px;
+  width: 35%;
+  border: 2px solid;
+  margin: 5%;
+}
+
+#sign-up > .login {
+  height: 34px;
+}
+
+#sign-up > .login img {
+  height: 50px;
 }
 
 #delete {
