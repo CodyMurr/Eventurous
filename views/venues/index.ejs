@@ -14,5 +14,18 @@
     <h2>No venues to display</h2>
 <% } %> 
 <a href="/venues/new"><h3>Add Venue</h3></a>
-
+<form action="/venues/index" method="GET">
+    <input type="hidden" name="lat">
+    <input type="hidden" name="lng">
+    <button type="submit" disabled>Find Venues Near Me</button>
+</form>
+<script>
+    const latInp = document.querySelector('[name="lat"]');
+    const lngInp = document.querySelector('[name="lng"]');
+    navigator.geolocation.getCurrentPosition(function(result) {
+        latInp.value = result.coords.latitude;
+        lngInp.value = result.coords.longitude;
+        document.querySelector('button').disabled = false;
+    });
+</script>
 <%- include('../partials/footer') %> 
