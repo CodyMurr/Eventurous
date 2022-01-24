@@ -47,11 +47,22 @@ section, header {
   background-color: #0C2427;
 }
 
+section {
+  border-radius: var(--bor-rad);
+  margin: var(--five-per);
+}
+
 textarea {
   color: #0C2427;
   font-size: 1.25em;
   height: 55px;
   border-radius: 15px;
+}
+
+input {
+  width: 200px;
+  height: 50px;
+  color: #0C2427;
 }
 
 button {
@@ -87,11 +98,9 @@ button {
 #sign-up {
   justify-content: var(--sp-ev);
   align-items: var(--center);
-  border-radius: var(--bor-rad);
   height: 300px;
   width: 35%;
   border: var(--bor);
-  margin: var(--five-per);
 }
 
 #sign-up > .login {
@@ -113,7 +122,6 @@ button {
 #post, #show-post {
   width: 50%;
   margin: 2%;
-  border-radius: var(--bor-rad);
 }
 
 #post h2 {
@@ -131,11 +139,9 @@ button {
 
 #comment {
   border: 1px solid;
-  border-radius: var(--bor-rad);
   width: 30%;
   min-height: 75px;
   justify-content: var(--sp-ev) !important;
-  margin: var(--sp-ev);
 }
 
 #comment > #content {
@@ -144,9 +150,13 @@ button {
 }
 
 #categ-name {
-  margin: var(--five-per);
   width: 200px;
   height: 50px;
-  border-radius: var(--bor-rad);
   cursor: var(--point);
+}
+
+#venue {
+  height: 100px;
+  width: 300px;
+  text-align: center;
 }
