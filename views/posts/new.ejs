@@ -1,19 +1,26 @@
 <%- include('../partials/header') %>
 
-<ul class="breadcrumb">
-    <li><a href="/">Home</a></li>
-    <li><a href="/new">New Post</a></li>
-</ul>
 <section id="new-post" class="flex col">
+    <h2>Post an Event</h2>
     <form action="/" method="POST">
-        <label>Title: </label>
-        <input type="text" name="title" required>
-        <textarea name="event" cols="30" rows="10" placeholder="Spread the word..." required></textarea>
-        <label>Venue: </label>
-        <input type="text" name="venue" required>
-        <label>Location: </label>
-        <input type="text" name="location" required>
-        <button type="submit">Post</button>
+        <div class="flex col">
+            <label>Title: </label>
+            <input type="text" name="title" required>
+        </div>
+        <div class="flex col">
+            <label>Venue: </label>
+            <input type="text" name="venue" required>
+        </div>
+        <div class="flex col">
+            <label>Location: </label>
+            <input type="text" name="location" required>
+        </div>
+        <div class="flex col">
+            <textarea name="event" cols="30" rows="10" placeholder="Spread the word..." required></textarea>
+        </div>
+        <div class="flex col">
+            <button class="flex" type="submit">Post</button>
+        </div>
     </form>
 </section>
 
