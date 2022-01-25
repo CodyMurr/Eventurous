@@ -17,10 +17,15 @@ Full stack CRUD application implementing RESTful server-side routing as well as 
 Built with:
 
 -Mongoose/MongoDB
+
 -Express.JS
+
 -Node.JS
--Client-side vanilla Javascript
+
+-Client-side Vanilla Javascript
+
 -EJS/HTML
+
 -CSS
 
 ---
