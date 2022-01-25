@@ -49,7 +49,7 @@ section, header {
 
 section {
   border-radius: var(--bor-rad);
-  margin: var(--five-per);
+  margin: 2%;
 }
 
 textarea {

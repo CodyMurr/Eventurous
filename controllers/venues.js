@@ -1,7 +1,6 @@
 const Venue = require('../models/venue');
 const axios = require('axios');
 const FSQ_BASE_URL = "https://api.foursquare.com/v3/places/nearby?";
-
 module.exports = {
     index,
 };
@@ -12,7 +11,7 @@ async function index(req, res) {
     if (lat) {
         // call FSQ api
         const response = await axios.get(
-            `${FSQ_BASE_URL}ll=${lat},${lng}`,
+            `${FSQ_BASE_URL}ll=${lat},${lng}&limit=50`,
            { headers: {Authorization: process.env.FSQ_TOKEN}}
         );
         console.log(response.data.results);
