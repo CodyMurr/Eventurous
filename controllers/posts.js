@@ -24,7 +24,7 @@ function update(req, res) {
 
 function edit(req, res) {
     Post.findOne({_id: req.params.id, user: req.user._id}, 
-        function(err) {
+        function(err, post) {
             if (err || !post) return res.redirect('/posts');
             res.render('posts/edit', { post });
     });
