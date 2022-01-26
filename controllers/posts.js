@@ -9,12 +9,12 @@ module.exports = {
 };
 
 function deletePost(req, res) {
-    Post.findOneAndDelete({
-            _id: req.params.id, user: req.user._id 
-        })
-        .then(function(err) {
+    Post.findOneAndDelete(
+        {_id: req.params.id, user: req.user._id},
+        function(err) {
             res.redirect('/posts');
-        });
+        }
+    );
 }
 
 function show(req, res) {
