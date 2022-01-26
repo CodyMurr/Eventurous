@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 <% if (user) { %> 
+    
     <% posts.forEach(function(p) { %>
         <section id="post" class="flex col">
             <a href="/posts/<%= p._id %>"><h2 class="flex"><%= p.title %></h2></a>
@@ -15,6 +16,8 @@
         <h2>Login/Sign-up: </h2>
         <a href="/auth/google" class="login"><img src="https://i.imgur.com/FHjYyi0.png"></a>
     </section>
+    
 <% } %>
+
 
 <%- include('../partials/footer') %>

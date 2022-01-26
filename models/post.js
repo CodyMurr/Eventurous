@@ -20,6 +20,10 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
+    dateOf: {
+        type: Date,
+        required: true
+    },
     event: {
         type: String,
         required: true

@@ -27,7 +27,7 @@ function newPost(req, res) {
     res.render('posts/new', { title: 'Post an Event' });
 }
 
-function index(req, res) {
+async function index(req, res) {
     Post.find({})
     .then(function(posts) {
       res.render('posts/index', { title: 'All Posts', posts });
