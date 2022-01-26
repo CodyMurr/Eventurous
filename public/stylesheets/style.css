@@ -141,12 +141,22 @@ button {
   text-align: left;
 }
 
-#post, #post-user, #show-post {
+#post, #post-user, #show-post, #delete-post {
   height: 170px;
 }
 
-#post-user {
+#post-user, #delete-post {
   width: 175px;
+}
+
+#delete-post {
+  background-color: transparent;
+  margin-left: 0;
+}
+
+#delete-post > form > button {
+  width: 70px;
+  height: 50px
 }
 
 #new-post {
