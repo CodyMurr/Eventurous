@@ -3,15 +3,19 @@
 <% if (user) { %> 
     
     <% posts.forEach(function(p) { %>
-        <section id="post" class="flex col">
-                <a href="/posts/<%= p._id %>"><h2 class="flex"><%= p.title %></h2></a>
-                <p><%= p.event %></p>
-                <aside>
-                    <h3 id="venue"><%= p.venue %>&nbsp;|&nbsp;<%= p.location %></h3>
-                </aside>
-            </div>
-        
-        </section>
+        <div id="post-div" class="flex row">
+            <section id="post-user" class="flex col">
+                <img src="<%= p.userAvatar %>" alt="avatar">
+                <h2><%= p.userName %></h2>
+            </section>
+            <section id="post" class="flex col">
+                    <a href="/posts/<%= p._id %>"><h2 class="flex"><%= p.title %></h2></a>
+                    <p><%= p.event %></p>
+                    <aside>
+                        <h3 id="venue"><%= p.venue %>&nbsp;|&nbsp;<%= p.location %></h3>
+                    </aside>        
+            </section>
+        </div>
     <% }); %>
 <% } else { %>
     <section id="sign-up" class="flex col">

@@ -12,7 +12,7 @@ const commentSchema = new Schema({
 
 const postSchema = new Schema({
     title: String,
-    venue: String,
+    venue: String ,
     location: {
         type: String,
         required: true
@@ -21,7 +21,10 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
-    comments: [commentSchema]
+    comments: [commentSchema],
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    userName: String,
+    userAvatar: String,
 }, {
     timestamps: true
 });

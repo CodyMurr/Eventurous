@@ -126,10 +126,13 @@ button {
 }
 
 #post, #show-post {
-  height: 170px;
   width: 75%;
   align-items: center;
   justify-content: space-around !important;
+}
+
+#post-div {
+  width: 100%;
 }
 
 #post > aside {
@@ -138,6 +141,13 @@ button {
   text-align: left;
 }
 
+#post, #post-user, #show-post {
+  height: 170px;
+}
+
+#post-user {
+  width: 175px;
+}
 
 #new-post {
   align-items: center;
@@ -160,7 +170,7 @@ button {
   align-self: center;
 }
 
-#user > img {
+#user > img, #post-user > img {
   border-radius: 50%;
   width: 60px;
   height: 60px;
