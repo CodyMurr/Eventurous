@@ -27,7 +27,7 @@ function create(req, res) {
         return post.save();
     })
     .then(function(post) {
-        res.redirect(`/posts/${post._id}`);
+        res.redirect(`/posts/${req.params.id}`);
     });
 }
 

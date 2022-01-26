@@ -2,7 +2,7 @@
 
 <section id="new-post" class="flex col">
     <h2>Post an Event</h2>
-    <form action="/" method="POST">
+    <form action="/posts" method="POST">
         <div class="flex col">
             <label>Title: </label>
             <input type="text" name="title" required>
@@ -14,10 +14,6 @@
         <div class="flex col">
             <label>Location: </label>
             <input type="text" name="location" required>
-        </div>
-        <div class="flex col">
-            <label>Date: </label>
-            <input type="date" name="dateOf" required>
         </div>
         <div class="flex col">
             <textarea name="event" cols="30" rows="10" placeholder="Spread the word..." required></textarea>

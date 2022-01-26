@@ -12,29 +12,15 @@ const commentSchema = new Schema({
 
 const postSchema = new Schema({
     title: String,
-    venue: {
-        type: Schema.Types.ObjectId,
-        ref: 'Venue'
-    },
+    venue: { type: Schema.Types.ObjectId, ref: 'Venue' },
     location: {
         type: String,
-        required: true
-    },
-    dateOf: {
-        type: Date,
         required: true
     },
     event: {
         type: String,
         required: true
     },
-    category: {
-        type: Schema.Types.ObjectId,
-        ref: 'Category'
-    },
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
-    userName: String,
-    userAvatar: String,
     comments: [commentSchema]
 }, {
     timestamps: true

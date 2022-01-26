@@ -19,7 +19,7 @@ function create(req, res) {
     post.save(function(err) {
         if (err) console.log(err);
         console.log(post);
-        res.redirect('/posts');
+        res.redirect('posts/index');
     });
 }
 
