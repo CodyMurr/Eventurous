@@ -72,6 +72,9 @@ input {
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #0C2427;
   border-radius: 10px;
   width: 80px;
@@ -147,10 +150,14 @@ button {
 
 #post-user, #delete-post {
   width: 175px;
+  background-color: transparent;
+}
+
+#post-user {
+  margin-right: 0;
 }
 
 #delete-post {
-  background-color: transparent;
   margin-left: 0;
 }
 

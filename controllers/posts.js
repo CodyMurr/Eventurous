@@ -26,12 +26,12 @@ function show(req, res) {
 
 function create(req, res) {
     const post = new Post(req.body);
-    post.user = req.user._id;
-    post.userName = req.user.name;
-    post.userAvatar = req.user.avatar;
-    post.save()
-    .then(function(post) {
-        res.redirect(`/posts/${req.params.id}`);
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+    post.save(function(err) {
+        if (err) console.log(err);
+        res.redirect(`/posts/${post._id}`);
     });
 }
 
