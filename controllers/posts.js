@@ -12,7 +12,7 @@ module.exports = {
 
 function update(req, res) {
     Post.findOneAndUpdate(
-        {_id: req.params.id, user: req.user._id},
+        {_id: req.params.id},
         req.body,
         {new: true},
         function(err, post) {

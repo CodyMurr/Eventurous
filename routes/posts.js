@@ -13,12 +13,12 @@ router.get('/new', isLoggedIn, postsCtrl.new);
 router.get('/:id', postsCtrl.show);
 // GET /posts/:id/edit
 router.get('/:id/edit', postsCtrl.edit);
+// PUT /posts/:id
+router.put('/:id', postsCtrl.update);
 // POST /posts (handle the new form being submitted)
 router.post('/', isLoggedIn, postsCtrl.create);
 // DELETE /posts/:id
 router.delete('/:id', isLoggedIn, postsCtrl.delete);
-// PUT /posts/:id
-router.put('/:id', postsCtrl.update);
 
 module.exports = router;
 

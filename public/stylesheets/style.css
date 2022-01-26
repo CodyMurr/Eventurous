@@ -178,9 +178,17 @@ button {
   height: 20%;
 }
 
-#new-post > form > div > input {
+#new-post > form > div > input, 
+#edit-post > form > div > input {
   height: 30px;
   width: 75%;
+  margin: 1%;
+}
+#new-post > form > div > textarea,
+#edit-post > form > div > textarea  {
+  width: 80%;
+  height: 50px;
+  margin: 2%;
 }
 
 #new-post > button {
