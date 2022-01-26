@@ -5,8 +5,30 @@ module.exports = {
     new: newPost,
     create,
     show,
-    delete: deletePost
+    delete: deletePost,
+    edit,
+    update
 };
+
+function update(req, res) {
+    Post.findOneAndUpdate(
+        {_id: req.params.id, user: req.user._id},
+        req.body,
+        {new: true},
+        function(err, post) {
+            if (err || !post) return res.redirect('/posts');
+            res.redirect(`posts/${post._id}`);
+        }
+    );
+}
+
+function edit(req, res) {
+    Post.findOne({_id: req.params.id, user: req.user._id}, 
+        function(err) {
+            if (err || !post) return res.redirect('/posts');
+            res.render('posts/edit', { post });
+    });
+}
 
 function deletePost(req, res) {
     Post.findOneAndDelete(
