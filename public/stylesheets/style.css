@@ -42,6 +42,7 @@ header {
   width: 100%;
   text-align: var(--center);
   border-radius: var(--bor-rad);
+  margin-bottom: 7%;
 }
 
 header h1 {
@@ -125,15 +126,18 @@ button {
 }
 
 #post, #show-post {
-  width: 50%;
-  margin: 2%;
+  height: 170px;
+  width: 75%;
+  align-items: center;
+  justify-content: space-around !important;
 }
 
-#post h2 {
-  width: 100%;
+#post > aside {
+  display: inline-block;
   height: 50px;
-  margin-top: 0;
+  text-align: left;
 }
+
 
 #new-post {
   align-items: center;
