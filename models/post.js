@@ -12,7 +12,7 @@ const commentSchema = new Schema({
 
 const postSchema = new Schema({
     title: String,
-    venue: { type: Schema.Types.ObjectId, ref: 'Venue' },
+    venue: String,
     location: {
         type: String,
         required: true
