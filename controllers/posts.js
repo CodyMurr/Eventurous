@@ -17,7 +17,7 @@ function update(req, res) {
         {new: true},
         function(err, post) {
             if (err || !post) return res.redirect('/posts');
-            res.redirect(`posts/${post._id}`);
+            res.redirect(`/posts/${post._id}`);
         }
     );
 }
