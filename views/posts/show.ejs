@@ -3,7 +3,7 @@
 <section id="show-post" class="grid">
     <h2 class="title"><%= post.title %>&nbsp;</h2>
     <a href="/posts/<%= post._id %>/edit" class="edit title"><i class="far fa-edit"></i></a>
-    <p class="content"><%= post.event %> </p>
+    <p class="content"><a href="<%= post.link %>"><%= post.link %></a></p>
     <div class="flex row footer">
         <h3><%= post.venue %>&nbsp;|&nbsp;</h3>
         <h3><%= post.location %></h3>

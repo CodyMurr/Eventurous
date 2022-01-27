@@ -13,8 +13,12 @@ const commentSchema = new Schema({
 const postSchema = new Schema({
     title: String,
     venue: String,
-    location: {
-        type: String,
+    location: String,
+    date: {
+        type: Date,
+        default: function() {
+            return new Date().toLocaleDateString();
+        }
     },
     link: String,
     comments: [commentSchema],

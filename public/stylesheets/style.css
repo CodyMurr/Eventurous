@@ -53,7 +53,7 @@ header h1 {
   letter-spacing: 2px;
 }
 
-header, nav, #venue, #sign-up {
+header, nav, #venue, #sign-up, #post, #show-post {
   background-color: #0C2427;
 }
 
@@ -85,6 +85,10 @@ button {
 
 aside {
   justify-self: center;
+}
+
+textarea {
+  border-radius: var(--bor-rad);
 }
 
 .flex {
@@ -174,6 +178,7 @@ aside {
   grid-template-areas: 
   "header header header"
   "body body body"
+  "body body body"
   "footer footer footer";
 }
 
@@ -192,10 +197,6 @@ aside {
 }
 
 #post {
-  grid-template-areas: 
-  "header"
-  "body"
-  "footer";
   width: 50%;
 }
 
