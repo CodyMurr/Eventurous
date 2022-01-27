@@ -35,6 +35,8 @@ Built with:
 
 Upon entering the site, user is prompted to login/sign-up via Google authentication. Once successfully logged in, user will see a list of posts made by other users regarding local events they are interested in. Try it out: [Eventurous](https://eventurous-night-out.herokuapp.com/)
 
+[Trello](https://trello.com/b/rzqfyvkn/eventurous)
+
 ---
 
 ## Next Steps
