@@ -1,27 +1,19 @@
 <%- include('../partials/header') %>
-
-<section id="new-post" class="flex col">
     <h2>Post an Event</h2>
-    <form action="/posts" method="POST">
-        <div class="flex col">
+    <form class="add-event grid" action="/posts" method="POST">
+        <div class="grid">
             <label>Title: </label>
             <input type="text" name="title" required>
-        </div>
-        <div class="flex col">
+      
             <label>Venue: </label>
             <input type="text" name="venue" required>
-        </div>
-        <div class="flex col">
+     
             <label>Location: </label>
             <input type="text" name="location" required>
+            
+            <label>Add Link: </label>
+            <input type="url" name="link">
         </div>
-        <div class="flex col">
-            <textarea name="event" cols="30" rows="10" placeholder="Spread the word..." required></textarea>
-        </div>
-        <div class="flex col">
-            <button class="flex" type="submit">Post</button>
-        </div>
+        <button class="flex" type="submit">Post</button>
     </form>
-</section>
-
 <%- include('../partials/footer') %> 
