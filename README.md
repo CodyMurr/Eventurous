@@ -1,7 +1,8 @@
-# Night Out
+# Eventurous
 
 ## About
 
+Eventurous is a platform based around social event planning in the user's local area. 
 
 ---
 
@@ -32,6 +33,7 @@ Built with:
 
 ## Getting Started
 
+Upon entering the site, user is prompted to login/sign-up via Google authentication. Once successfully logged in, user will see a list of posts made by other users regarding local events they are interested in. Try it out: [Eventurous](https://eventurous-night-out.herokuapp.com/)
 
 ---
 
