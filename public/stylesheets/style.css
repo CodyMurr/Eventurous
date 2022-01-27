@@ -55,6 +55,7 @@ section, header, nav {
 }
 
 section {
+  height: 170px;
   border-radius: var(--bor-rad);
   margin: 2%;
 }
@@ -63,6 +64,7 @@ textarea {
   color: #0C2427;
   font-size: 1.25em;
   height: 55px;
+  width: 65%;
   border-radius: 15px;
 }
 
@@ -90,6 +92,10 @@ button {
   align-items: var(--center);
 }
 
+.grid {
+  display: grid;
+}
+
 .col {
   flex-direction: column;
 }
@@ -98,25 +104,31 @@ button {
   flex-direction: row;
 }
 
+.title {
+  grid-area: header;
+  justify-self: center;
+}
+
+.content {
+  grid-area: body;
+}
+
+.footer {
+   grid-area: footer;
+}
+
 .fa-trash-alt {
   color: #ff0000 !important;
 }
 .fa-trash-alt:hover {
   color: #fff !important;
 }
-.fa-edit {
-  font-size: 1.5em;
-  position: absolute;
-  right: 18%;
-  top: 31%;
-}
 
+/* ------- Sign-Up -------- */
 #sign-up {
   justify-content: var(--sp-ev);
-  align-items: var(--center);
   height: 300px;
-  width: 35%;
-  border: var(--bor);
+  width: 300px;
 }
 
 #sign-up > .login {
@@ -127,13 +139,7 @@ button {
   height: 50px;
 }
 
-#delete {
-  width: 40px;
-}
-
-#delete:hover {
-  background-color: #ff0000;
-}
+/* ------------------ */
 
 #post, #show-post {
   width: 75%;
@@ -141,8 +147,33 @@ button {
   justify-content: space-around !important;
 }
 
+/* ------- Show-Page ------- */
+#show-post {
+  grid-template-areas: 
+  "header header header"
+  "body body body"
+  "footer footer footer";
+}
+
+#show-post .title {
+  font-size: 1.5em;
+}
+
+#show-post .edit {
+  justify-self: end;
+}
+
+/* -------- Index Page --------- */
+
 #post-div {
   width: 100%;
+}
+
+#post {
+  grid-template-areas: 
+  "header"
+  "body"
+  "footer";
 }
 
 #post > aside {
@@ -151,26 +182,25 @@ button {
   text-align: left;
 }
 
-#post, #post-user, #show-post, #delete-post {
-  height: 170px;
-}
-
 #post-user, #delete-post {
-  width: 175px;
+  margin: 0;
+  text-align: center;
   background-color: transparent;
-}
-
-#post-user {
-  margin-right: 0;
-}
-
-#delete-post {
-  margin-left: 0;
 }
 
 #delete-post > form > button {
   width: 50px;
   height: 50px
+}
+
+#delete-post > form > button:hover {
+  background-color: #ff0000;
+}
+
+/* ----- Edit Page ----- */
+
+#edit-post {
+  height: 350px;
 }
 
 #new-post {
@@ -190,12 +220,6 @@ button {
   height: 30px;
   width: 75%;
   margin: 1%;
-}
-#new-post > form > div > textarea,
-#edit-post > form > div > textarea  {
-  width: 80%;
-  height: 50px;
-  margin: 2%;
 }
 
 #new-post > button {
@@ -234,9 +258,10 @@ button {
 }
 
 #near-me {
-  width: 175px;
+  width: 200px;
   font-size: 1em;
-  margin: 10%;
+  margin-bottom: 10%;
+  margin-top: 0;
 }
 
 #venue-list {

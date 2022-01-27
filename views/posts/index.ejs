@@ -8,17 +8,17 @@
                 <img src="<%= p.userAvatar %>" alt="avatar">
                 <h2><%= p.userName %></h2>
             </section>
-            <section id="post" class="flex col">
-                    <a href="/posts/<%= p._id %>"><h2 class="flex"><%= p.title %></h2></a>
-                    <p><%= p.event %></p>
+            <section id="post" class="grid">
+                    <a href="/posts/<%= p._id %>" class="title"><h2><%= p.title %></h2></a>
+                    <p class="content"><%= p.event %></p>
                     <aside>
-                        <h3 id="venue"><%= p.venue %>&nbsp;|&nbsp;<%= p.location %></h3>
+                        <h3 id="venue" class="footer"><%= p.venue %>&nbsp;|&nbsp;<%= p.location %></h3>
                     </aside>        
             </section>
             <section id="delete-post" class="flex">
                 <% if (user && user._id.equals(p.user)) { %> 
                 <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
-                    &nbsp;&nbsp;<button id="delete" type="submit"><i class="far fa-trash-alt"></i></button>
+                    &nbsp;&nbsp;<button type="submit"><i class="far fa-trash-alt"></i></button>
                 </form>
                 <% } %> 
             </section>
