@@ -1,29 +1,21 @@
 <%- include('../partials/header') %> 
 
-<section id="edit-post" class="flex col">
-    <h2>Post an Event</h2>
-    <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
-        <div class="flex col">
-            <label>Title: </label>
-            <input type="text" name="title" value="<%= post.title %>" required>
-        </div>
-        <div class="flex col">
-            <label>Venue: </label>
-            <input type="text" name="venue" value="<%= post.venue %>" required>
-        </div>
-        <div class="flex col">
-            <label>Location: </label>
-            <input type="text" name="location" value="<%= post.location %>" required>
-        </div>
-        <div class="flex col">
-            <textarea name="event" cols="30" rows="10" required>
-                <%= post.event %>
-            </textarea>
-        </div>
-        <div class="flex col">
-            <button class="flex" type="submit">Save</button>
-        </div>
-    </form>
-</section>
+<h2>Edit Post</h2>
+<form class="add-event grid" action="/posts" method="POST">
+    <div class="grid">
+        <label>Title: </label>
+        <input type="text" name="title" value="<%=post.title%>" required>
+  
+        <label>Venue: </label>
+        <input type="text" name="venue" value="<%=post.venue%>" required>
+ 
+        <label>Location: </label>
+        <input type="text" name="location" value="<%=post.location%>" required>
+        
+        <label>Add Link: </label>
+        <input type="url" name="link" value="<%=post.link%>">
+    </div>
+    <button class="flex" type="submit">Post</button>
+</form>
 
 <%- include('../partials/footer') %> 

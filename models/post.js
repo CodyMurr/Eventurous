@@ -12,15 +12,11 @@ const commentSchema = new Schema({
 
 const postSchema = new Schema({
     title: String,
-    venue: String ,
+    venue: String,
     location: {
         type: String,
-        required: true
     },
-    event: {
-        type: String,
-        required: true
-    },
+    link: String,
     comments: [commentSchema],
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,

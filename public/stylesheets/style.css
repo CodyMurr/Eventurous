@@ -50,7 +50,7 @@ header h1 {
   letter-spacing: 2px;
 }
 
-section, header, nav {
+header, nav, #venue, #sign-up {
   background-color: #0C2427;
 }
 
@@ -77,6 +77,10 @@ button {
   height: 30px;
   font-size: 1.5em;
   cursor: var(--point);
+}
+
+aside {
+  justify-self: center;
 }
 
 .flex {
@@ -188,6 +192,7 @@ button {
   "header"
   "body"
   "footer";
+  width: 50%;
 }
 
 #post > aside {
@@ -212,16 +217,6 @@ button {
 }
 
 /* ----- Edit Page ----- */
-
-#edit-post {
-  height: 350px;
-}
- 
-#edit-post > form > div > input {
-  height: 30px;
-  width: 75%;
-  margin: 1%;
-}
 
 #user > img, #post-user > img {
   border-radius: 50%;

@@ -12,9 +12,9 @@ router.get('/new', isLoggedIn, postsCtrl.new);
 // GET /posts/:id (display a "detail/show" page for a single post)
 router.get('/:id', postsCtrl.show);
 // GET /posts/:id/edit
-router.get('/:id/edit', postsCtrl.edit);
+router.get('/:id/edit', isLoggedIn, postsCtrl.edit);
 // PUT /posts/:id
-router.put('/:id', postsCtrl.update);
+router.put('/:id', isLoggedIn, postsCtrl.update);
 // POST /posts (handle the new form being submitted)
 router.post('/', isLoggedIn, postsCtrl.create);
 // DELETE /posts/:id
