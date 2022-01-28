@@ -2,6 +2,7 @@
 
 ## About
 
+
 Eventurous is a platform based around social event planning in the user's local area. 
 
 ---
@@ -40,3 +41,9 @@ Upon entering the site, user is prompted to login/sign-up via Google authenticat
 ---
 
 ## Next Steps
+
+-Add categories feature 
+
+-Add list of localities to categorize posts
+
+-Add trending feature
