@@ -170,8 +170,15 @@ img {
   border-radius: 10px;
 }
 
+#venue {
+  height: 150px;
+  width: 350px;
+  text-align: center;
+}
+
 #venue-list {
-  flex-flow: row-wrap;
+  width: 100%;
+  flex-flow: row wrap;
 }
 
 @media only screen and (max-width: 576px) {
