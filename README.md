@@ -8,6 +8,15 @@ Eventurous is a platform based around social event planning in the user's local 
 
 ## Screenshots
 
+![home page](public/images/screenshots/home-page.png)
+
+![home page 2](public/images/screenshots/home-page-2.png)
+
+![post event](public/images/screenshots/post-event.png)
+
+![show event](public/images/screenshots/show-event.png)
+
+![venues](public/images/screenshots/venues.png)
 
 ---
 
