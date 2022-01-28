@@ -2,7 +2,6 @@
 
 ## About
 
-
 Eventurous is a platform based around social event planning in the user's local area. 
 
 ---

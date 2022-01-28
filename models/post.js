@@ -22,6 +22,7 @@ const postSchema = new Schema({
     },
     link: String,
     comments: [commentSchema],
+    category: String,
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,
     userAvatar: String,

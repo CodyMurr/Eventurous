@@ -1,37 +1,30 @@
 <%- include('../partials/header') %>
 
-<% if (user) { %> 
+    <section>
+        <% posts.forEach(function(p) { %>
+            <div id="post-div" class="flex row">
+                <section id="post-user" class="flex col">
+                    <img src="<%= p.userAvatar %>" alt="avatar">
+                    <h2><%= p.userName %></h2>
+                </section>
     
-    <% posts.forEach(function(p) { %>
-        <div id="post-div" class="flex row">
-            <section id="post-user" class="flex col">
-                <img src="<%= p.userAvatar %>" alt="avatar">
-                <h2><%= p.userName %></h2>
-            </section>
-
-            <section id="post" class="flex col">
-                    <a href="/posts/<%= p._id %>" class="title"><h2><%= p.title %></h2></a>
-                    <h3 class="content">Details @: <a href="<%= p.link %>" target="_blank"><%= p.link %></a></h3>
-                    <aside>
-                        <h3 id="event-venue" class="footer"><%= p.venue %>&nbsp;|&nbsp;<%= p.location %></h3>
-                    </aside>        
-            </section>
-
-            <section id="delete-post" class="flex">
-                <% if (user && user._id.equals(p.user)) { %> 
-                <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
-                    &nbsp;&nbsp;<button type="submit"><i class="far fa-trash-alt"></i></button>
-                </form>
-                <% } %> 
-            </section>
-        </div>
-    <% }); %>
-<% } else { %>
-    <section id="sign-up" class="flex col">
-        <h2>Login/Sign-up: </h2>
-        <a href="/auth/google" class="login"><img src="https://i.imgur.com/FHjYyi0.png"></a>
+                <section id="post" class="flex col">
+                        <a href="/posts/<%= p._id %>" class="title"><h2><%= p.title %></h2></a>
+                        <h3 class="content">Details @: <a href="<%= p.link %>" target="_blank"><%= p.link %></a></h3>
+                        <aside>
+                            <h3 id="event-venue" class="footer"><%= p.venue %>&nbsp;|&nbsp;<%= p.location %></h3>
+                        </aside>        
+                </section>
+    
+                <section id="delete-post" class="flex">
+                    <% if (user && user._id.equals(p.user)) { %> 
+                    <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
+                        &nbsp;&nbsp;<button type="submit"><i class="far fa-trash-alt"></i></button>
+                    </form>
+                    <% } %> 
+                </section>
+            </div>
+        <% }); %>
     </section>
-
-<% } %>
 
 <%- include('../partials/footer') %>

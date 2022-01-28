@@ -7,8 +7,13 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body class="flex col">
-    <nav class="flex row">
+    
+    <header>
+      <a href="/">
+        <h1>EVENTUROUS</h1>
+      </a>
       <% if (user) { %>
+      <nav class="flex row">
         <a href="/">Home</a>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <a href="/">All Events</a>
@@ -18,10 +23,19 @@
         <a href="/venues/index">Venues</a>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <a href="/logout">Log Out</a>
-        <% } %>
-    </nav>
-    <header>
-      <a href="/">
-        <h1>EVENTUROUS</h1>
-      </a>
+      </nav>
+      <% } else { %>
+        <nav class="flex row">
+          <a href="/">Home</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="/">All Events</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="/posts/new">Post an Event</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="/venues/index">Venues</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="/login">Log In</a>
+        </nav>
+      <% } %>
+      
     </header>
