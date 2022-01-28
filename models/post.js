@@ -17,7 +17,8 @@ const postSchema = new Schema({
     date: {
         type: Date,
         default: function() {
-            return new Date().toLocaleDateString();
+            let day = new Date().toDateString();
+            return day.slice(0, 15);
         }
     },
     link: String,

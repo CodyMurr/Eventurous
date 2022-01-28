@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
-
-    <section id="main" class="flex">
-        <% posts.forEach(function(p) { %>
+<section id="index" class="flex col">
+    <% posts.forEach(function(p) { %>
+        <div id="main" class="flex">
             <div class="felx col">
                 <img src="<%= p.userAvatar %>" alt="avatar">
                 <h2><%= p.userName %></h2>
@@ -15,14 +15,14 @@
             </div>    
             
             <% if (user && user._id.equals(p.user)) { %> 
-            <div class="flex">
-                <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
-                    &nbsp;&nbsp;<button type="submit"><i class="far fa-trash-alt"></i></button>
-                </form>
-            </div>
+                <div class="flex">
+                    <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
+                        &nbsp;&nbsp;<button type="submit"><i class="far fa-trash-alt"></i></button>
+                    </form>
+                </div>
             <% } %> 
-
-        <% }); %>
-    </section>
-
+        </div>
+    <% }); %>
+</section>
+            
 <%- include('../partials/footer') %>
