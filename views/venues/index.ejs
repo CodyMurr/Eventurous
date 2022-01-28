@@ -1,6 +1,6 @@
 <%- include('../partials/header') %> 
 
-<form action="/venues/index" method="GET">
+<form id="venue-form" class="flex col" action="/venues/index" method="GET">
     <input type="hidden" name="lat">
     <input type="hidden" name="lng">
     <button id="near-me" type="submit" disabled>Find Venues Near Me</button>

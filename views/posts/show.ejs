@@ -1,14 +1,17 @@
 <%- include('../partials/header') %>
 
-<section id="show-post" class="grid">
-    <h2 class="title"><%= post.title %>&nbsp;</h2>
-    <a href="/posts/<%= post._id %>/edit" class="edit title"><i class="far fa-edit"></i></a>
-    <p class="content"><a href="<%= post.link %>"><%= post.link %></a></p>
-    <div class="flex row footer">
-        <h3><%= post.venue %>&nbsp;|&nbsp;</h3>
-        <h3><%= post.location %></h3>
-    </div>
-</section>
+<div id="show-post" class="flex col">
+    <h2><%= post.title %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <% if (user) { %>
+        <a href="/posts/<%= post._id %>/edit"><i class="far fa-edit"></i></a>
+    <% } %> 
+    </h2>
+    <h3><%= post.date %></h3>
+    <h3 id="event-venue"><%= post.venue %>&nbsp;|&nbsp;<%= post.location %></h3>
+    <a href="<%= post.link %>"><%= post.link %></a>
+    <h3><%=post.category%></h3>
+
+</div> 
 
 <h2>Comments</h2>
 <% if (user) { %>
