@@ -163,6 +163,8 @@ img {
 
 #show-post {
   width: 65%;
+
+  margin: 10% 0 5% 0 !important;
 }
 
 #near-me {
@@ -181,6 +183,28 @@ img {
 #venue-list {
   width: 100%;
   flex-flow: row wrap;
+}
+
+#add-comment-form {
+  justify-content: center;
+  align-items: center;
+}
+
+#add-comment-form textarea {
+  font-size: 1.5rem;
+  width: 400px;
+  height: 100px;
+}
+
+#add-comment-form > button {
+  width: 150px;
+  margin-top: 5%;
+}
+
+#comment {
+  justify-content: space-evenly;
+  align-items: center;
+  width: 75%;
 }
 
 @media only screen and (max-width: 576px) {
