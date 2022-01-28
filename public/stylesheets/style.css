@@ -167,7 +167,9 @@ img {
 
 #near-me {
   width: 200px;
-  border-radius: 10px;
+  font-size: 1em;
+  margin-bottom: 10%;
+  margin-top: 0;
 }
 
 #venue {
