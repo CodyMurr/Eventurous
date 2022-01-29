@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
-  color: #163D57;
+  color: #d2c7f7;
+}
+
+html {
+  background-image: url("../images/concert.jpeg");
+  background-position: center;
+  background-size: cover;
 }
 
 body {
@@ -8,7 +14,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   padding: 50px;
-  background-color: #E9F7F9;
+  
   text-align: center;
   display: flex;
   align-items: center;
@@ -46,8 +52,15 @@ header h1 {
   letter-spacing: 2px;
 }
 
-header, #venue, #sign-up, #post, #show-post, #main-content {
-  background-color: #F7F1F8;
+header, 
+.add-event, 
+#add-comment-form,
+#venue, 
+#sign-up, 
+#post, 
+#show-post, 
+#main {
+  background-color: #07040fa6;
   border-radius: 25px;
 }
 
@@ -77,6 +90,11 @@ img {
   border-radius: 50%;
 }
 
+button {
+  color: #07040f;
+  border-radius: 15px;
+}
+
 .grid {
   display: grid;
 }
@@ -90,11 +108,13 @@ img {
 }
 
 .add-event {
-  margin: 10%;
+  margin: 15%;
   width: 30%;
-  height: 50%;
+  height: 70%;
+  padding: 5% 0;
   justify-items: center;
   gap: 20px;
+  border-radius: 25px; 
 }
 
 .add-event div {
@@ -151,7 +171,7 @@ img {
   align-items: center;
   margin: 5%;
   border-radius: 25px;
-  box-shadow: 5px 5px 10px;
+  box-shadow: 5px 5px 10px #07040fa6;
 }
 
 #main-content div {
@@ -179,9 +199,11 @@ img {
 }
 
 #show-post {
-  width: 65%;
-
   margin: 10% 0 5% 0 !important;
+}
+
+#show-post, #add-comment-form {
+  width: 45%;
 }
 
 #near-me {
@@ -205,6 +227,10 @@ img {
 #add-comment-form {
   justify-content: center;
   align-items: center;
+}
+
+#add-comment-form label {
+  font-size: 2em;
 }
 
 #add-comment-form textarea {
